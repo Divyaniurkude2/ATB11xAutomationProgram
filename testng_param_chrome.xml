@@ -2,16 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="D:/Testing/ATB11xAutomationProgram">
-
-        <groups>
-            <run>
-                <include name="reg">
-                </include>
-            </run>
-        </groups>
-
+        <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="com.thetestingacademy.ex_05_TestNGExamples.APITesting017_TestNG_Groups">
+            <class name="com.thetestingacademy.ex_05_TestNGExamples.APITesting019_TestNG_Parameter">
             </class>
         </classes>
     </test>

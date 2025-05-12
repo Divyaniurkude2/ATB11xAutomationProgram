@@ -10,7 +10,7 @@ public class APITesting026_TestNG_Assertions {
     public void test_hardAssertExample() {
         System.out.println("Start of the program");
         Boolean is_neeru_male = false;
-        Assert.assertEquals("pramod","Pramod");
+        Assert.assertEquals("divyani","Divyani");
         System.out.println("End of the program");
 
     }
@@ -20,7 +20,7 @@ public class APITesting026_TestNG_Assertions {
     @Test
     public void test_softAssertExample() {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals("pramod","Pramod");
+        softAssert.assertEquals("divyani","Divyani");
         System.out.println("End of program");
         softAssert.assertAll();
     }

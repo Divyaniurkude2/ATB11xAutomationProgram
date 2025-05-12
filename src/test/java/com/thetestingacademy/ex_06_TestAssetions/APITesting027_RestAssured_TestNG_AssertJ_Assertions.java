@@ -20,7 +20,7 @@ public class APITesting027_RestAssured_TestNG_AssertJ_Assertions {
     public void test_POST() {
 
         String payload_POST = "{\n" +
-                "    \"firstname\" : \"Pramod\",\n" +
+                "    \"firstname\" : \"Divyani\",\n" +
                 "    \"lastname\" : \"Dutta\",\n" +
                 "    \"totalprice\" : 123,\n" +
                 "    \"depositpaid\" : false,\n" +

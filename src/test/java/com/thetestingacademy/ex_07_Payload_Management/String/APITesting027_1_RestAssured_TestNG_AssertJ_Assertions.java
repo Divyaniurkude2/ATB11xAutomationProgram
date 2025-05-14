@@ -1,4 +1,4 @@
-package com.thetestingacademy.ex_06_TestAssetions;
+package com.thetestingacademy.ex_07_Payload_Management.String;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -8,10 +8,10 @@ import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import static org.assertj.core.api.Assertions.*;
 
+import static org.assertj.core.api.Assertions.assertThat;
 
-public class APITesting027_RestAssured_TestNG_AssertJ_Assertions {
+public class APITesting027_1_RestAssured_TestNG_AssertJ_Assertions {
 
     RequestSpecification requestSpecification;
     ValidatableResponse validatableResponse;
@@ -23,7 +23,7 @@ public class APITesting027_RestAssured_TestNG_AssertJ_Assertions {
     public void test_POST() {
 
         String payload_POST = "{\n" +
-                "    \"firstname\" : \"Divyani\",\n" +
+                "    \"firstname\" : \"Pramod\",\n" +
                 "    \"lastname\" : \"Dutta\",\n" +
                 "    \"totalprice\" : 123,\n" +
                 "    \"depositpaid\" : false,\n" +
@@ -48,7 +48,7 @@ public class APITesting027_RestAssured_TestNG_AssertJ_Assertions {
         validatableResponse = response.then().log().all();
         validatableResponse.statusCode(200);
 
-        // Rest Assured -> import org.hamcrest.Matchers;
+        // Rest Assured -> import org.hamcrest.Matchers; %4-%5
         // Matchers.equalto()
 
         validatableResponse.body("booking.firstname", Matchers.equalTo("Pramod"));
@@ -58,10 +58,11 @@ public class APITesting027_RestAssured_TestNG_AssertJ_Assertions {
 
         // TestNG - Extract the details of the firstname, bookingId, lastname from Response.
 
-
         bookingId = response.then().extract().path("bookingid");
         String firstname = response.then().extract().path("booking.firstname");
         String lastname = response.then().extract().path("booking.lastname");
+
+
 
         // TestNG Assertions - 75%
         // SoftAssert vs
@@ -81,5 +82,11 @@ public class APITesting027_RestAssured_TestNG_AssertJ_Assertions {
 
         //        String s = ""; //Empty
         //        String s2 = " "; //Blank
+
+
+
+
+
     }
+
 }
